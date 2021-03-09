@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Methods", "Libs\Methods\Met
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumDigits", "SumDigits\SumDigits.csproj", "{9525F09D-EB17-4E23-B941-246FBBA55574}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseNum", "ReverseNum\ReverseNum.csproj", "{3C20365C-C3EC-4D10-A53F-89DEF9C8BA2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{9525F09D-EB17-4E23-B941-246FBBA55574}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9525F09D-EB17-4E23-B941-246FBBA55574}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9525F09D-EB17-4E23-B941-246FBBA55574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C20365C-C3EC-4D10-A53F-89DEF9C8BA2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C20365C-C3EC-4D10-A53F-89DEF9C8BA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C20365C-C3EC-4D10-A53F-89DEF9C8BA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C20365C-C3EC-4D10-A53F-89DEF9C8BA2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
