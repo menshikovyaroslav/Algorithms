@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumDigits", "SumDigits\SumD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseNum", "ReverseNum\ReverseNum.csproj", "{3C20365C-C3EC-4D10-A53F-89DEF9C8BA2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumInBinary", "NumInBinary\NumInBinary.csproj", "{91C6EA57-9684-4753-A60B-4C004130DDED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{3C20365C-C3EC-4D10-A53F-89DEF9C8BA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C20365C-C3EC-4D10-A53F-89DEF9C8BA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C20365C-C3EC-4D10-A53F-89DEF9C8BA2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C6EA57-9684-4753-A60B-4C004130DDED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C6EA57-9684-4753-A60B-4C004130DDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C6EA57-9684-4753-A60B-4C004130DDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C6EA57-9684-4753-A60B-4C004130DDED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
