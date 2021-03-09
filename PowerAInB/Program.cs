@@ -8,11 +8,11 @@ namespace PowerAInB
         {
             Console.WriteLine("Enter A");
             var aStr = Console.ReadLine();
-            var a = int.Parse(aStr);
+            int.TryParse(aStr, out var a);
 
             Console.WriteLine("Enter B");
             var bStr = Console.ReadLine();
-            var b = int.Parse(bStr);
+            int.TryParse(bStr, out var b);
 
             var result = 1;
 
