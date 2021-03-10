@@ -32,7 +32,7 @@ namespace AlgorithmLee
             Int32.TryParse(MapWidth.Text, out mapW);
 
             var map = new int[mapH, mapW];
-            var blockCount = (mapH - 2) * (mapW - 2) * 15 / 100;
+            var blockCount = (mapH - 2) * (mapW - 2) * 25 / 100;
 
             // Left and right labirithm bounds
             for (int i = 0; i < mapH; i++)
@@ -60,8 +60,32 @@ namespace AlgorithmLee
                 }
             }
 
-            var aField = new Field(rnd.Next(1, mapH - 1), rnd.Next(1, mapW - 1), 1);
-            var bField = new Field(rnd.Next(1, mapH - 1), rnd.Next(1, mapW - 1), 1);
+            var aField = new Field(0, 0, 1);
+            var bField = new Field(0, 0, 1);
+
+            while (true)
+            {
+                var h = rnd.Next(1, mapH - 1);
+                var w = rnd.Next(1, mapW - 1);
+
+                if (map[h, w] == 0)
+                {
+                    aField = new Field(h, w, 1);
+                    break;
+                }
+            }
+
+            while (true)
+            {
+                var h = rnd.Next(1, mapH - 1);
+                var w = rnd.Next(1, mapW - 1);
+
+                if (map[h, w] == 0 && !(aField.I == h && aField.J == w))
+                {
+                    bField = new Field(h, w, 1);
+                    break;
+                }
+            }
 
             map[aField.I, aField.J] = 1;
 
@@ -80,6 +104,49 @@ namespace AlgorithmLee
                 if (map[field.I, field.J] == 0) map[field.I, field.J] = field.V;
 
                 if (field.I == bField.I && field.J == bField.J) break;
+            }
+
+            for (int i = 0; i < mapH; i++)
+            {
+                for (int j = 0; j < mapW; j++)
+                {
+                    Rectangle rect = new Rectangle
+                    {
+                        Width = 19,
+                        Height = 19
+                    };
+
+                    Label label = new Label
+                    {
+                        Content = map[i, j],
+                        FontSize = 16,
+                        Foreground = Brushes.Red,
+                        Padding = new Thickness(0)
+                    };
+
+                    Map.Children.Add(rect);
+                    Canvas.SetTop(rect, i * 20);
+                    Canvas.SetLeft(rect, j * 20);
+
+                    if (map[i, j] == -1) rect.Fill = Brushes.Gray;
+                    else
+                    {
+                        rect.Fill = Brushes.White;
+                    }
+
+                    if (map[i, j] > 0)
+                    {
+                        Map.Children.Add(label);
+                        Canvas.SetTop(label, i * 20);
+                        Canvas.SetLeft(label, j * 20);
+                    }
+
+                    if (i == bField.I && j == bField.J)
+                    {
+                        label.Foreground = Brushes.Green;
+                        label.FontWeight = FontWeights.Bold;
+                    }
+                }
             }
 
         }

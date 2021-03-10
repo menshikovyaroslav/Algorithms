@@ -7,12 +7,13 @@
         mc:Ignorable="d" WindowState="Maximized"
         Title="AlgorithmLee" Height="450" Width="800">
     <DockPanel>
-        <ToolBarPanel>
+        <ToolBarPanel DockPanel.Dock="Top">
             <StackPanel Orientation="Horizontal" Margin="6">
                 <TextBox Name="MapHeight" Text="20" Width="60" Height="25" Margin="1" />
                 <TextBox Name="MapWidth" Text="20" Width="60" Height="25" Margin="1" />
                 <Button Name="StartBtn" Content="Start" Width="100" Height="25" Margin="1" Click="StartBtn_Click" />
             </StackPanel>
         </ToolBarPanel>
+        <Canvas DockPanel.Dock="Top" Name="Map" ClipToBounds="True" Margin="6" />
     </DockPanel>
 </Window>
