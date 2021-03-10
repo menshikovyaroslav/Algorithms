@@ -34,8 +34,21 @@ namespace AlgorithmLee
             var map = new int[mapH, mapW];
             var blockCount = (mapH - 2) * (mapW - 2) * 15 / 100;
 
-            var rnd = new Random();
+            // Left and right labirithm bounds
+            for (int i = 0; i < mapH; i++)
+            {
+                map[i, 0] = -1;
+                map[i, mapW - 1] = -1;
+            }
 
+            // Up and down labirithm bounds
+            for (int i = 0; i < mapW; i++)
+            {
+                map[0, i] = -1;
+                map[0, mapH - 1] = -1;
+            }
+
+            var rnd = new Random();
             while (blockCount > 0)
             {
                 var rndH = rnd.Next(1, mapH - 1);
