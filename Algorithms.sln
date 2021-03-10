@@ -9,15 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{E79F6275-2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Methods", "Libs\Methods\Methods.csproj", "{C6209D65-1B28-4AC8-93CD-DBB6FD4D3DA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumDigits", "SumDigits\SumDigits.csproj", "{9525F09D-EB17-4E23-B941-246FBBA55574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumDigits", "SumDigits\SumDigits.csproj", "{9525F09D-EB17-4E23-B941-246FBBA55574}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseNum", "ReverseNum\ReverseNum.csproj", "{3C20365C-C3EC-4D10-A53F-89DEF9C8BA2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseNum", "ReverseNum\ReverseNum.csproj", "{3C20365C-C3EC-4D10-A53F-89DEF9C8BA2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumInBinary", "NumInBinary\NumInBinary.csproj", "{91C6EA57-9684-4753-A60B-4C004130DDED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumInBinary", "NumInBinary\NumInBinary.csproj", "{91C6EA57-9684-4753-A60B-4C004130DDED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerAInB", "PowerAInB\PowerAInB.csproj", "{E800926B-5C3D-4B20-868A-370EFCB4669C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerAInB", "PowerAInB\PowerAInB.csproj", "{E800926B-5C3D-4B20-868A-370EFCB4669C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExitFromLabyrinth", "ExitFromLabyrinth\ExitFromLabyrinth.csproj", "{69BD0A8B-F13B-466A-944A-BD610E4480A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExitFromLabyrinth", "ExitFromLabyrinth\ExitFromLabyrinth.csproj", "{69BD0A8B-F13B-466A-944A-BD610E4480A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmLee", "AlgorithmLee\AlgorithmLee.csproj", "{EFE3D30F-C9B1-4DD1-9B1E-33EEB7A5DC0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{69BD0A8B-F13B-466A-944A-BD610E4480A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69BD0A8B-F13B-466A-944A-BD610E4480A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69BD0A8B-F13B-466A-944A-BD610E4480A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE3D30F-C9B1-4DD1-9B1E-33EEB7A5DC0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE3D30F-C9B1-4DD1-9B1E-33EEB7A5DC0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE3D30F-C9B1-4DD1-9B1E-33EEB7A5DC0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE3D30F-C9B1-4DD1-9B1E-33EEB7A5DC0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

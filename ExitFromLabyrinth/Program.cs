@@ -10,17 +10,17 @@ namespace ExitFromLabyrinth
         static Queue<Field> queue = new Queue<Field>();
         static void Main(string[] args)
         {
-            int[,] map = new int[7, 7];
+            int[,] map = new int[20, 20];
             map[4, 3] = -1;
             map[4, 4] = -1;
             map[4, 2] = -1;
             map[1, 3] = 1;
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 20; i++)
             {
                 map[0, i] = -1;
                 map[i, 0] = -1;
-                map[i, 6] = -1;
-                map[6, i] = -1;
+                map[i, 19] = -1;
+                map[19, i] = -1;
             }
 
             queue.Enqueue(new Field(1, 3, 1));
@@ -28,6 +28,9 @@ namespace ExitFromLabyrinth
             while (queue.Count > 0)
             {
                 var field = queue.Dequeue();
+
+                if (field.V > 1) continue;
+
                 if (map[field.I - 1, field.J] == 0) queue.Enqueue(new Field(field.I - 1, field.J, field.V + 1));
                 if (map[field.I, field.J + 1] == 0) queue.Enqueue(new Field(field.I, field.J + 1, field.V + 1));
                 if (map[field.I + 1, field.J] == 0) queue.Enqueue(new Field(field.I + 1, field.J, field.V + 1));
@@ -36,9 +39,9 @@ namespace ExitFromLabyrinth
                 if (map[field.I, field.J] == 0) map[field.I, field.J] = field.V;
             }
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 20; i++)
             {
-                for (int j = 0; j < 7; j++)
+                for (int j = 0; j < 20; j++)
                 {
                     Console.Write($"{map[i, j]}\t");
                 }
@@ -47,7 +50,7 @@ namespace ExitFromLabyrinth
 
             var list = new List<Field>();
 
-            queue.Enqueue(new Field(5, 1, 7));
+            queue.Enqueue(new Field(5, 4, map[5, 4]));
             while (true)
             {
                 var field = queue.Dequeue();
@@ -86,9 +89,9 @@ namespace ExitFromLabyrinth
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine();
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 20; i++)
             {
-                for (int j = 0; j < 7; j++)
+                for (int j = 0; j < 20; j++)
                 {
                     var field = list.SingleOrDefault(el => el.I == i && el.J == j);
                     if (field == null) Console.ResetColor();

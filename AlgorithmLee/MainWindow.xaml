@@ -1,0 +1,18 @@
+﻿<Window x:Class="AlgorithmLee.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AlgorithmLee"
+        mc:Ignorable="d" WindowState="Maximized"
+        Title="AlgorithmLee" Height="450" Width="800">
+    <DockPanel>
+        <ToolBarPanel>
+            <StackPanel Orientation="Horizontal" Margin="6">
+                <TextBox Name="MapHeight" Text="20" Width="60" Height="25" Margin="1" />
+                <TextBox Name="MapWidth" Text="20" Width="60" Height="25" Margin="1" />
+                <Button Name="StartBtn" Content="Start" Width="100" Height="25" Margin="1" Click="StartBtn_Click" />
+            </StackPanel>
+        </ToolBarPanel>
+    </DockPanel>
+</Window>
