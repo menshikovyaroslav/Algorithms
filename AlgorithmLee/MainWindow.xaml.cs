@@ -32,8 +32,20 @@ namespace AlgorithmLee
             Int32.TryParse(MapWidth.Text, out mapW);
 
             var map = new int[mapH, mapW];
+            var blockCount = (mapH - 2) * (mapW - 2) * 15 / 100;
 
+            var rnd = new Random();
 
+            while (blockCount > 0)
+            {
+                var rndH = rnd.Next(1, mapH - 1);
+                var rndW = rnd.Next(1, mapW - 1);
+                if (map[rndH, rndW] == 0)
+                {
+                    map[rndH, rndW] = -1;
+                    blockCount--;
+                }
+            }
         }
     }
 }
