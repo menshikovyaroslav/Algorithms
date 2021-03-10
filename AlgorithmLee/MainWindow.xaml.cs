@@ -59,6 +59,9 @@ namespace AlgorithmLee
                     blockCount--;
                 }
             }
+
+            var aPoint = new Point(rnd.Next(1, mapH - 1), rnd.Next(1, mapW - 1));
+            var bPoint = new Point(rnd.Next(1, mapH - 1), rnd.Next(1, mapW - 1));
         }
     }
 }
