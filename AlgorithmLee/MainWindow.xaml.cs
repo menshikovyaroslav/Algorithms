@@ -45,7 +45,7 @@ namespace AlgorithmLee
             for (int i = 0; i < mapW; i++)
             {
                 map[0, i] = -1;
-                map[0, mapH - 1] = -1;
+                map[mapH - 1, i] = -1;
             }
 
             var rnd = new Random();
@@ -60,8 +60,60 @@ namespace AlgorithmLee
                 }
             }
 
-            var aPoint = new Point(rnd.Next(1, mapH - 1), rnd.Next(1, mapW - 1));
-            var bPoint = new Point(rnd.Next(1, mapH - 1), rnd.Next(1, mapW - 1));
+            var aField = new Field(rnd.Next(1, mapH - 1), rnd.Next(1, mapW - 1), 1);
+            var bField = new Field(rnd.Next(1, mapH - 1), rnd.Next(1, mapW - 1), 1);
+
+            map[aField.I, aField.J] = 1;
+
+            var queue = new Queue<Field>();
+            queue.Enqueue(aField);
+
+            while (queue.Count > 0)
+            {
+                var field = queue.Dequeue();
+
+                if (map[field.I - 1, field.J] == 0) queue.Enqueue(new Field(field.I - 1, field.J, field.V + 1));
+                if (map[field.I, field.J + 1] == 0) queue.Enqueue(new Field(field.I, field.J + 1, field.V + 1));
+                if (map[field.I + 1, field.J] == 0) queue.Enqueue(new Field(field.I + 1, field.J, field.V + 1));
+                if (map[field.I, field.J - 1] == 0) queue.Enqueue(new Field(field.I, field.J - 1, field.V + 1));
+
+                if (map[field.I, field.J] == 0) map[field.I, field.J] = field.V;
+
+                if (field.I == bField.I && field.J == bField.J) break;
+            }
+
+        }
+    }
+
+    public class Field
+    {
+        private int _i;
+        private int _j;
+        private int _v;
+
+        public int I
+        {
+            get { return _i; }
+            set { _i = value; }
+        }
+
+        public int J
+        {
+            get { return _j; }
+            set { _j = value; }
+        }
+
+        public int V
+        {
+            get { return _v; }
+            set { _v = value; }
+        }
+
+        public Field(int i, int j, int v)
+        {
+            I = i;
+            J = j;
+            V = v;
         }
     }
 }
