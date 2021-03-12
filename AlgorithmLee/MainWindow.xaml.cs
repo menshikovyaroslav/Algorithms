@@ -30,12 +30,17 @@ namespace AlgorithmLee
         {
             #region Map Bounds
 
-            int mapH, mapW = 20;
+            int mapH, mapW, blockPercent = 20;
             Int32.TryParse(MapHeight.Text, out mapH);
             Int32.TryParse(MapWidth.Text, out mapW);
+            Int32.TryParse(MapBlockPercent.Text, out blockPercent);
+
+            if (mapH == 0) mapH = 20;
+            if (mapW == 0) mapW = 20;
+            if (blockPercent == 0) mapH = 20;
 
             var map = new int?[mapH, mapW];
-            var blockCount = (mapH - 2) * (mapW - 2) * 25 / 100;
+            var blockCount = (mapH - 2) * (mapW - 2) * blockPercent / 100;
 
             // Left and right labirithm bounds
             for (int i = 0; i < mapH; i++)
@@ -227,14 +232,27 @@ namespace AlgorithmLee
             }
 
             #endregion
-
         }
     }
 
+    /// <summary>
+    /// Field on the Map
+    /// </summary>
     public class Field : IEquatable<Field>
     {
+        /// <summary>
+        /// Field row
+        /// </summary>
         private int _i;
+
+        /// <summary>
+        /// Field column
+        /// </summary>
         private int _j;
+
+        /// <summary>
+        /// Field value
+        /// </summary>
         private int? _v;
 
         public int I
