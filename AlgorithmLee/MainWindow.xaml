@@ -32,21 +32,28 @@
                     </StackPanel.Resources>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Rows:" />
-                        <TextBox Name="MapHeight" Text="20" />
+                        <TextBox Name="MapHeightTb" Text="20" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Columns:" />
-                        <TextBox Name="MapWidth" Text="20" />
+                        <TextBox Name="MapWidthTb" Text="20" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Block %:" />
                         <TextBox Name="MapBlockPercent" Text="20" />
                     </StackPanel>
                     <Button Name="StartBtn" Content="Start" Width="100" Height="25" Margin="1" Click="StartBtn_Click" />
+                    <StackPanel Orientation="Horizontal">
+                        <Button Name="ZoomMinus" Content="-" Width="30" Click="ZoomMinus_Click" />
+                        <Button Name="ZoomPlus" Content="+" Width="30" Click="ZoomPlus_Click" />
+                    </StackPanel>
                 </StackPanel>
             </Border>
-
         </ToolBarPanel>
-        <Canvas DockPanel.Dock="Top" Name="Map" ClipToBounds="True" Margin="6" />
+        <Canvas Width="5000" Height="5000" DockPanel.Dock="Top" Name="Map" ClipToBounds="True" Margin="6">
+            <Canvas.RenderTransform>
+                <ScaleTransform x:Name="CanvasTransform" ScaleX="1" ScaleY="1" CenterX="0" CenterY="0"></ScaleTransform>
+            </Canvas.RenderTransform>
+        </Canvas>
     </DockPanel>
 </Window>

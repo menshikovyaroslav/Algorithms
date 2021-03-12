@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,7 +21,7 @@ namespace AlgorithmLee
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         public MainWindow()
         {
@@ -31,8 +33,8 @@ namespace AlgorithmLee
             #region Map Bounds
 
             int mapH, mapW, blockPercent = 20;
-            Int32.TryParse(MapHeight.Text, out mapH);
-            Int32.TryParse(MapWidth.Text, out mapW);
+            Int32.TryParse(MapHeightTb.Text, out mapH);
+            Int32.TryParse(MapWidthTb.Text, out mapW);
             Int32.TryParse(MapBlockPercent.Text, out blockPercent);
 
             if (mapH == 0) mapH = 20;
@@ -232,6 +234,18 @@ namespace AlgorithmLee
             }
 
             #endregion
+        }
+
+        private void ZoomPlus_Click(object sender, RoutedEventArgs e)
+        {
+            CanvasTransform.ScaleX += 0.2;
+            CanvasTransform.ScaleY += 0.2;
+        }
+
+        private void ZoomMinus_Click(object sender, RoutedEventArgs e)
+        {
+            CanvasTransform.ScaleX -= 0.2;
+            CanvasTransform.ScaleY -= 0.2;
         }
     }
 
