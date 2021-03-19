@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearch", "BinarySort\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsertionSort", "InsertionSort\InsertionSort.csproj", "{5084F33F-A722-4353-B376-65D4DF1A3FC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectionSort", "SelectionSort\SelectionSort.csproj", "{657EA272-1488-4994-8400-7590D43EEB7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelectionSort", "SelectionSort\SelectionSort.csproj", "{657EA272-1488-4994-8400-7590D43EEB7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchStringInString", "SearchStringInString\SearchStringInString.csproj", "{CAAE1550-1D9F-4FBF-8CD3-A8AE96C5B30A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchStringInString", "SearchStringInString\SearchStringInString.csproj", "{CAAE1550-1D9F-4FBF-8CD3-A8AE96C5B30A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountDoubleChar", "CountDoubleChar\CountDoubleChar.csproj", "{ABC00B76-7D92-4F22-B3DF-4AA8CE94F6AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,10 @@ Global
 		{CAAE1550-1D9F-4FBF-8CD3-A8AE96C5B30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAAE1550-1D9F-4FBF-8CD3-A8AE96C5B30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAAE1550-1D9F-4FBF-8CD3-A8AE96C5B30A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC00B76-7D92-4F22-B3DF-4AA8CE94F6AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC00B76-7D92-4F22-B3DF-4AA8CE94F6AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC00B76-7D92-4F22-B3DF-4AA8CE94F6AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC00B76-7D92-4F22-B3DF-4AA8CE94F6AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
