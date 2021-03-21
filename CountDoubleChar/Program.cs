@@ -9,7 +9,7 @@ namespace CountDoubleChar
         static void Main(string[] args)
         {
             string str = "Aaz9kldkaaaaaaaaaakd";
-            var count = GetCountDoubleChar2(str);
+            var count = GetCountDoubleChar3(str);
             Console.WriteLine(count);
             Console.ReadKey();
         }
@@ -46,6 +46,31 @@ namespace CountDoubleChar
                 var ch = str[i];
                 var code = (int)ch;
                 arr[code]++;
+            }
+
+            foreach (var item in arr)
+            {
+                if (item > 1) result++;
+            }
+
+            return result;
+        }
+
+        static int GetCountDoubleChar3(string str)
+        {
+            str = str.ToUpper();
+
+            int[] arr = new int[43];
+
+            int result = 0;
+
+            // A = 65, Z = 90, 0 = 48, 9 = 57
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                var ch = str[i];
+                var code = (int)ch;
+                arr[code-48]++;
             }
 
             foreach (var item in arr)
