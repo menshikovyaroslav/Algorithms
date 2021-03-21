@@ -8,9 +8,13 @@ namespace MyList
     {
         static void Main(string[] args)
         {
-            var list = new MyList(5);
+            var list = new MyList<object>();
 
-            list[3] = 10;
+            list.Add(5);
+            list.Add("7");
+            list.Add(2);
+
+            list[2] = "x";
 
             foreach (var item in list)
             {
@@ -21,16 +25,16 @@ namespace MyList
         }
     }
 
-    public class MyList : IEnumerable
+    public class MyList<T> : IEnumerable
     {
-        int[] array;
+        T[] array;
 
-        public MyList(int size)
+        public MyList()
         {
-            array = new int[size];
+            array = new T[0];
         }
 
-        public int this[int index]
+        public T this[int index]
         {
             get
             {
@@ -44,21 +48,27 @@ namespace MyList
 
         public IEnumerator GetEnumerator()
         {
-            return new MyEnumerator(array);
+            return new MyEnumerator<T>(array);
+        }
+
+        public void Add(T element)
+        {
+            Array.Resize(ref array, array.Length + 1);
+            array[array.Length - 1] = element;
         }
     }
 
-    public class MyEnumerator : IEnumerator<int>
+    public class MyEnumerator<T> : IEnumerator<T>
     {
-        int[] array;
+        T[] array;
         int position = -1;
 
-        public MyEnumerator(int[] arr)
+        public MyEnumerator(T[] arr)
         {
             array = arr;
         }
 
-        public int Current
+        public T Current
         {
             get
             {
