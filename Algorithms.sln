@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchStringInString", "Sea
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountDoubleChar", "CountDoubleChar\CountDoubleChar.csproj", "{ABC00B76-7D92-4F22-B3DF-4AA8CE94F6AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyList", "MyList\MyList.csproj", "{CE34995E-27A0-447F-8885-ACB2885B38E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyList", "MyList\MyList.csproj", "{CE34995E-27A0-447F-8885-ACB2885B38E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterWordsByVowelsCount", "FilterWordsByVowelsCount\FilterWordsByVowelsCount.csproj", "{CD6547DD-83FC-482A-91AC-5D1539BE2760}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,10 @@ Global
 		{CE34995E-27A0-447F-8885-ACB2885B38E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE34995E-27A0-447F-8885-ACB2885B38E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE34995E-27A0-447F-8885-ACB2885B38E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD6547DD-83FC-482A-91AC-5D1539BE2760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD6547DD-83FC-482A-91AC-5D1539BE2760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD6547DD-83FC-482A-91AC-5D1539BE2760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD6547DD-83FC-482A-91AC-5D1539BE2760}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
